@@ -3,73 +3,206 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Selected projects by Souheil Jadallah — client websites, research sites, and personal builds." />
   <title>Souheil Jadallah | Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Navbar -->
+  <div id="progress-bar"></div>
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
+  <a href="#main" class="skip-link">Skip to content</a>
+
   <header>
-    <nav class="navbar">
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="skill.html">Skills</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="contact.HTML">Contact</a></li>
-      </ul>
+    <nav class="navbar" aria-label="Main">
+      <div class="nav-inner">
+        <a href="home.html" class="nav-logo">souheil<span>.dev</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="aboutMe.html">About</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="skill.html">Skills</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h1>My Projects</h1>
-    <p>Here are some of the projects I’ve worked on, showcasing my skills in design, development, and problem-solving:</p>
-
-    <div class="projects-grid">
-
-      <!-- Project Card 1 -->
-      <div class="project-card">
-        <div class="project-inner">
-          <div class="project-front">
-            <h2>Juliet Rose Jewelers Website</h2>
-            <p>A responsive website for a local boutique.</p>
-          </div>
-          <div class="project-back">
-            <p>Designed and developed a responsive, elegant website highlighting jewelry collections with mobile-first design principles.</p>
-            <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-          </div>
-        </div>
+  <main id="main">
+    <section id="projects">
+      <div class="section-head fade-in">
+        <span class="eyebrow">Projects</span>
+        <h1>Things I've built</h1>
+        <p>Hover or tap a card to see the details behind each build.</p>
       </div>
 
-      <!-- Project Card 2 -->
-      <div class="project-card">
-        <div class="project-inner">
-          <div class="project-front">
-            <h2>Builders Elite Contractors</h2>
-            <p>Company website for showcasing services.</p>
-          </div>
-          <div class="project-back">
-            <p>Built a custom company website with intuitive navigation and deployed it on GitHub Pages for cost-effective hosting.</p>
-            <p><strong>Technologies:</strong> HTML, CSS, GitHub Pages</p>
-          </div>
-        </div>
-      </div>
+      <div class="projects-grid" data-stagger="120">
 
-      <!-- Project Card 3 -->
-      <div class="project-card">
-        <div class="project-inner">
-          <div class="project-front">
-            <h2>WWII Research Project</h2>
-            <p>Educational site about WWII home front.</p>
+        <article class="project-card reveal" tabindex="0" role="button" aria-label="Juliet Rose Jewelers Website — show details">
+          <div class="project-inner">
+            <div class="project-front">
+              <span class="project-index">01</span>
+              <h2>Juliet Rose Jewelers</h2>
+              <p>A responsive website for a local boutique.</p>
+              <span class="project-hint">tap to flip &#8594;</span>
+            </div>
+            <div class="project-back">
+              <h3>Overview</h3>
+              <p>Designed and developed an elegant, mobile-first site highlighting the shop's jewelry collections, with a layout that stays readable on every screen size.</p>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
           </div>
-          <div class="project-back">
-            <p>Developed a research-focused website presenting historical data in an interactive, visually engaging manner.</p>
-            <p><strong>Technologies:</strong> HTML, CSS</p>
-          </div>
-        </div>
-      </div>
+        </article>
 
+        <article class="project-card reveal" tabindex="0" role="button" aria-label="Builders Elite Contractors — show details">
+          <div class="project-inner">
+            <div class="project-front">
+              <span class="project-index">02</span>
+              <h2>Builders Elite Contractors</h2>
+              <p>Company website showcasing services.</p>
+              <span class="project-hint">tap to flip &#8594;</span>
+            </div>
+            <div class="project-back">
+              <h3>Overview</h3>
+              <p>Built a custom company site with intuitive navigation and a clear service breakdown, then deployed it on GitHub Pages for zero-cost hosting.</p>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">GitHub Pages</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" tabindex="0" role="button" aria-label="WWII Research Project — show details">
+          <div class="project-inner">
+            <div class="project-front">
+              <span class="project-index">03</span>
+              <h2>WWII Research Project</h2>
+              <p>Educational site about the WWII home front.</p>
+              <span class="project-hint">tap to flip &#8594;</span>
+            </div>
+            <div class="project-back">
+              <h3>Overview</h3>
+              <p>Developed a research-focused site that presents historical data in an interactive, visually engaging format rather than a wall of text.</p>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" tabindex="0" role="button" aria-label="SharePoint Site Development and Documentation — show details">
+          <div class="project-inner">
+            <div class="project-front">
+              <span class="project-index">04</span>
+              <h2>SharePoint Site Development</h2>
+              <p>Structured content platforms for R&amp;S Visuals clients.</p>
+              <span class="project-hint">tap to flip &#8594;</span>
+            </div>
+            <div class="project-back">
+              <h3>Overview</h3>
+              <p>Built and maintained structured, SharePoint-style web content platforms — designing the information architecture, managing content migration, and iterating documentation based on user feedback and issue patterns.</p>
+              <div class="tags">
+                <span class="tag">SharePoint</span>
+                <span class="tag">Information Architecture</span>
+                <span class="tag">Documentation</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" tabindex="0" role="button" aria-label="Multi-Tier Web Application — show details">
+          <div class="project-inner">
+            <div class="project-front">
+              <span class="project-index">05</span>
+              <h2>Multi-Tier Web Application</h2>
+              <p>Full-stack app with a Python/Java backend.</p>
+              <span class="project-hint">tap to flip &#8594;</span>
+            </div>
+            <div class="project-back">
+              <h3>Overview</h3>
+              <p>Developed a full-stack web application with an HTML/CSS/JavaScript front end and a Python/Java backend, wired together with REST API integrations and structured data management.</p>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Python</span>
+                <span class="tag">Java</span>
+                <span class="tag">REST API</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" tabindex="0" role="button" aria-label="Contacts Database System — show details">
+          <div class="project-inner">
+            <div class="project-front">
+              <span class="project-index">06</span>
+              <h2>Contacts Database System</h2>
+              <p>A CRUD record manager written in C.</p>
+              <span class="project-hint">tap to flip &#8594;</span>
+            </div>
+            <div class="project-back">
+              <h3>Overview</h3>
+              <p>Designed a record management system in C with full CRUD operations and validation logic — foundational database work that carries directly into structured data management.</p>
+              <div class="tags">
+                <span class="tag">C</span>
+                <span class="tag">CRUD</span>
+                <span class="tag">Data Validation</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" tabindex="0" role="button" aria-label="Data Analysis and Status Reporting — show details">
+          <div class="project-inner">
+            <div class="project-front">
+              <span class="project-index">07</span>
+              <h2>Data Analysis &amp; Reporting</h2>
+              <p>Python pipelines for tracking performance metrics.</p>
+              <span class="project-hint">tap to flip &#8594;</span>
+            </div>
+            <div class="project-back">
+              <h3>Overview</h3>
+              <p>Built data pipelines and dashboards in Python to track performance metrics and surface trends — the same skill set behind operational reporting and project status tracking.</p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Data Analysis</span>
+                <span class="tag">Dashboards</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>&copy; 2026 Souheil Jadallah. Built from scratch with HTML, CSS &amp; JavaScript.</span>
+      <div class="footer-links">
+        <a href="https://github.com/souheiljadallah" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/souheil-jadallah/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:souheil.jadd@gmail.com">Email</a>
+      </div>
     </div>
-  </section>
+  </footer>
+
+  <button id="to-top" aria-label="Back to top">&#8593;</button>
 </body>
 </html>
